@@ -37,8 +37,8 @@ ALTER COLUMN population FLOAT;
 SELECT location, date, total_cases, total_deaths, 
 	ROUND((total_deaths/total_cases) * 100, 2) AS deaths_percentage
 FROM project1..CovidDeaths
-WHERE location like 'Russia'
-ORDER BY 1, 2;
+WHERE location = 'Russia'
+ORDER BY 2;
 
 -- Теперь посмотрим на соотношение числа заболевших к размеру населения в России
 -- Из этого запроса можно посмотреть на то, какой процент населения переболел коронавирусом
